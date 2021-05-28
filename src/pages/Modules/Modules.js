@@ -1,10 +1,58 @@
-import React from 'react';
-
+import React, { useState } from 'react';
+import SideNavItem from '../../shared/SideNavItem/SideNavItem';
+import { Container, ContainerHeader, ModulesContainer, SideNav, Summary } from './Modules.elements';
+import ModulesData from '../../FakeData/ModuesData';
 const Modules = () => {
-    return (
-        <div>
+    const modulesData = ModulesData;
+    const [active, setActive] = useState(modulesData?.[2]);
 
-        </div>
+    const dateFormat = require("dateformat");
+    const now = new Date();
+    return (
+        <ModulesContainer>
+            <SideNav>
+                <h3>
+                    Modules
+                </h3>
+                {
+                    modulesData.map(data =>
+                        <SideNavItem
+                            data={data}
+                            active={active}
+                            setActive={setActive}
+                        />
+                    )
+                }
+
+            </SideNav>
+            <Container>
+                <ContainerHeader>
+
+                    <h2>
+                        {active.name}
+                    </h2>
+                    <small>
+                        {
+                            dateFormat(now, "dd, mmmm, yyyy, dddd")
+                        }
+                    </small>
+
+                </ContainerHeader>
+                <Summary>
+                    <h4>
+                        Session Plan
+                    </h4>
+                    <ol>
+                        {
+                            active.session.map((data, index) =>
+                                <li key={index}>{data.title}</li>)
+                        }
+                    </ol>
+
+                </Summary>
+
+            </Container>
+        </ModulesContainer>
     );
 };
 

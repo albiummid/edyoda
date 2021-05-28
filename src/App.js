@@ -11,7 +11,7 @@ function App() {
           <Route exact path='/' >
             <Dashboard />
           </Route>
-          <Route path='/:title' >
+          <Route path='/:currentPath' >
             <Dashboard />
           </Route>
         </Switch>

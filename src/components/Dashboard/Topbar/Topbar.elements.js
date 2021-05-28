@@ -7,11 +7,33 @@ color: white;
 flex-wrap: wrap;
 justify-content: space-between;
 align-items: center;
-padding: 20px 40px;
+padding: 5px 40px;
+min-height: 80px;
 border: 1px solid red;
 @media(max-width:480px){
     padding-inline: 5px;
 }
+`;
+export const ModuleTop = styled.div`
+display: flex;
+justify-content: center;
+align-items: center;
+gap: 20px;
+text-transform: uppercase;
+
+button{
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    padding: 10px 11px;
+    border-radius: 20px;
+    border: 1px solid black;
+    background-color:#A5AAB9;
+    color: white;
+    &:active{
+        opacity: .7;
+    }
+}
+
 `;
 export const ActionBar = styled.div`
 display: flex;
@@ -35,9 +57,11 @@ div{
     gap: 20px;
 }
 .d-none{
-    display: none;
+    transition: all 1s ease;
+    opacity: .5;
 }
 p{
+    cursor: pointer;
     border-radius:5px;
     padding: 5px 10px;
 }

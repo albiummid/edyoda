@@ -1,11 +1,17 @@
 import React, { useState } from 'react';
-import { ActionBar, ProgressContainer, TitleContainer, TopbarContainer } from './Topbar.elements';
+import { ActionBar, ModuleTop, ProgressContainer, TitleContainer, TopbarContainer } from './Topbar.elements';
 import dropdown from '../../../images/dropdown-icon-white.svg'
 import { Line } from 'rc-progress';
 const Topbar = () => {
     const percent = 33;
-    const [program, setProgram] = useState('JavaScript')
+    const [program, setProgram] = useState('Web Development')
     const [click, setClick] = useState(false);
+    const programPicker = (title) => {
+        setClick(false);
+        setProgram(title);
+    }
+    const currentPath = window.location.pathname;
+
     return (
         <>
             <TopbarContainer>
@@ -18,19 +24,43 @@ const Topbar = () => {
                         Full Stack Developer Program
                 </h4>
                 </TitleContainer>
-                <ProgressContainer>
-                    <p>{percent} %</p>
-                    <Line strokeWidth="5" trailWidth="5" percent={percent} />
-                </ProgressContainer>
+                {currentPath === '/modules' ?
+                    <ModuleTop>
+                        <small>
+                            Beginis in 12 Mins
+                        </small>
+                        <button>
+                            Join Session
+                        </button>
+                    </ModuleTop>
+                    :
+                    <ProgressContainer>
+                        <p>{percent} %</p>
+                        <Line strokeWidth="5" trailWidth="5" percent={percent} />
+                    </ProgressContainer>
+
+                }
             </TopbarContainer>
             {
                 click &&
-                <ActionBar>
+                <ActionBar className={click ? "" : 'd-none'}>
                     <small>Select Program</small>
                     <div>
-                        <p className={program === 'JavaScript' && 'active-program'} onClick={() => setProgram('JavaScript')}>JavaScript</p>
-                        <p className={program === 'React Js' && 'active-program'} onClick={() => setProgram('React Js')}>React Js</p>
-                        <p className={program === 'Data Analysis' && 'active-program'} onClick={() => setProgram('Data Analysis')}>Data Analysis </p>
+                        <p
+                            className={program === 'Web Development' && 'active-program'}
+                            onClick={() => programPicker('Web Development')}>
+                            Web Development
+                            </p>
+
+                        <p className={program === 'Graphics Design' && 'active-program'}
+                            onClick={() => programPicker('Graphics Design')}>
+                            Graphics Design
+                            </p>
+                        <p
+                            className={program === 'Machine Learning' && 'active-program'}
+                            onClick={() => programPicker('Machine Learning')}>
+                            Machine Learning
+                             </p>
                     </div>
                 </ActionBar>
             }

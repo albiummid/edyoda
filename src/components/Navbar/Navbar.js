@@ -14,7 +14,7 @@ const Navbar = () => {
             <NavItems>
                 <NavItem>
                     <NavLink to=''>
-                        <i class="fas fa-bell"></i>
+                        <i className="fas fa-bell"></i>
                     </NavLink>
                 </NavItem>
                 <NavItem>

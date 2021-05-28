@@ -5,6 +5,7 @@ display: flex;
 justify-content: space-between;
 align-items: center;
 padding: 10px 40px;
+height: 40px;
 
 @media(max-width:480px){
     padding-inline: 5px;
