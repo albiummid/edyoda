@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 export const ItemContainer = styled.div`
-margin: 10px auto;
 a{
     display: flex;
     flex-direction: column;
@@ -10,6 +9,7 @@ a{
     gap: 10px;
     text-decoration: none;
     color: #E0E6F2;
+    padding: 10px 0;
     text-transform:uppercase;
     width: 120px;
 }

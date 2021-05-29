@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import { ActionBar, ModuleTop, ProgressContainer, TitleContainer, TopbarContainer } from './Topbar.elements';
 import dropdown from '../../../images/dropdown-icon-white.svg'
 import { Line } from 'rc-progress';
-const Topbar = () => {
+const Topbar = ({ open, setOpen }) => {
+    console.log(open);
     const percent = 33;
     const [program, setProgram] = useState('Web Development')
     const [click, setClick] = useState(false);
@@ -16,6 +17,7 @@ const Topbar = () => {
         <>
             <TopbarContainer>
                 <TitleContainer>
+                    <i onClick={() => setOpen(!open)} class="fas fa-bars"></i>
                     <div>
                         <p>{program}</p>
                         <img className={click ? 'open' : 'close'} onClick={() => setClick(!click)} src={dropdown} alt="" />

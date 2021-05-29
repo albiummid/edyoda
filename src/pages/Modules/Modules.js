@@ -2,15 +2,17 @@ import React, { useState } from 'react';
 import SideNavItem from '../../shared/SideNavItem/SideNavItem';
 import { Container, ContainerHeader, ModulesContainer, SideNav, Summary } from './Modules.elements';
 import ModulesData from '../../FakeData/ModuesData';
+
 const Modules = () => {
     const modulesData = ModulesData;
     const [active, setActive] = useState(modulesData?.[2]);
-
+    const [open, setOpen] = useState(true);
     const dateFormat = require("dateformat");
     const now = new Date();
     return (
         <ModulesContainer>
-            <SideNav>
+            {open ? <SideNav open={open}>
+                <i onClick={() => setOpen(!open)} class="fas fa-times"></i>
                 <h3>
                     Modules
                 </h3>
@@ -25,9 +27,11 @@ const Modules = () => {
                 }
 
             </SideNav>
+                :
+                <i onClick={() => setOpen(!open)} class="fas fa-bars"></i>
+            }
             <Container>
                 <ContainerHeader>
-
                     <h2>
                         {active.name}
                     </h2>

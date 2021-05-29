@@ -9,9 +9,12 @@ justify-content: space-between;
 align-items: center;
 padding: 5px 40px;
 min-height: 80px;
-border: 1px solid red;
-@media(max-width:480px){
+@media(max-width:600px){
     padding-inline: 5px;
+    justify-content: center;
+}
+i{
+    font-size: x-large;
 }
 `;
 export const ModuleTop = styled.div`
@@ -39,7 +42,6 @@ export const ActionBar = styled.div`
 display: flex;
 background-color: #15294B;
 color: white;
-flex-wrap: wrap;
 flex-direction: column;
 justify-content: space-between;
 padding: 10px 40px;
@@ -54,6 +56,7 @@ animation: fluid 0.6s ease-in-out;
 }
 div{
     display: flex;
+    flex-wrap: wrap;
     gap: 20px;
 }
 .d-none{
@@ -68,6 +71,9 @@ p{
 .active-program{
     color: black;
     background-color: white;
+}
+@media(max-width:480px){
+    justify-content: center;
 }
 
 `;

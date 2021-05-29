@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const SideItem = styled.div`
+
 div{
     cursor: pointer;
 display: grid;
@@ -13,6 +14,10 @@ padding:10px 20px;
 width: 250px;
 img{
 width: 40px;
+}
+li{
+    font-size: x-small;
+    list-style: none;
 }
 }
 .active{

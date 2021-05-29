@@ -8,9 +8,9 @@ import instructorsImgWhite from '../../../images/instructors-white.svg'
 import instructorsImgDark from '../../../images/instructors-dark.svg'
 import BarItem from './BarItem/BarItem';
 
-const Sidebar = () => {
+const Sidebar = ({ open }) => {
     return (
-        <SidebarContainer>
+        <SidebarContainer open={open}>
             <BarItem
                 path=''
                 title='Home'
