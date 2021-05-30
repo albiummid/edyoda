@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { useState } from 'react';
 import { useParams } from 'react-router';
 import Sidebar from '../../components/Dashboard/Sidebar/Sidebar';
@@ -23,10 +23,6 @@ const Dashboard = () => {
             setOpen(true)
         }
     });
-    useEffect(() => {
-
-
-    })
     return (
         <Main>
             <Topbar open={open} setOpen={setOpen} />

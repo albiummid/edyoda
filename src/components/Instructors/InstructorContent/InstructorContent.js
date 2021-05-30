@@ -13,14 +13,14 @@ const InstructorContent = ({ data }) => {
                         <img src={icon} alt="" />
                         <div>
                             <a href={socialLink.github} target='_blank' rel="noreferrer"  >
-                                <i class="fab fa-github"></i>
+                                <i className="fab fa-github"></i>
                             </a>
                             <a href={socialLink.website} target='_blank' rel="noreferrer" >
-                                <i class="fas fa-globe-americas" ></i>
+                                <i className="fas fa-globe-americas" ></i>
                             </a>
 
                             <a href={socialLink.linkedIn} target='_blank' rel="noreferrer">
-                                <i class="fab fa-linkedin" ></i>
+                                <i className="fab fa-linkedin" ></i>
                             </a>
 
 

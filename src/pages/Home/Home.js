@@ -130,13 +130,13 @@ const Home = () => {
                 <div className='card_container'>
                     {
                         modulesData.map((data, index) =>
-                            <ModuleCard data={data} />
+                            <ModuleCard key={index} data={data} />
                         )
                     }
                 </div>
                 <div className='slider_buttons'>
-                    <i class="fas fa-arrow-circle-left"></i>
-                    <i class="fas fa-arrow-circle-right"></i>
+                    <i className="fas fa-arrow-circle-left"></i>
+                    <i className="fas fa-arrow-circle-right"></i>
                 </div>
             </div>
         </Container>

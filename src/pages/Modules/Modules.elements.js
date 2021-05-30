@@ -32,7 +32,11 @@ export const Container = styled.div`
        
     }
 }
-padding: 30px 50px;
+margin: 30px 50px;
+@media(max-width:600px){
+    padding: 0;
+    margin: 20px;
+}
 `;
 export const SideNav = styled.div`
 width: 250px;
@@ -53,7 +57,9 @@ h3{
 `;
 
 export const ContainerHeader = styled.div`
-margin-bottom: 50px;
+margin:0px;
+max-width: 300px;
+
 
 `;
 export const Summary = styled.div`

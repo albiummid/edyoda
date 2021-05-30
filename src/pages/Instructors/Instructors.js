@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import SideNavItem from '../../shared/SideNavItem/SideNavItem';
-import { Container, SideNav } from '../Modules/Modules.elements';
+import { SideNav } from '../Modules/Modules.elements';
 import { InstructorContainer } from './Instructors.elements';
 import instructors from '../../FakeData/InstructorsData'
 import InstructorContent from '../../components/Instructors/InstructorContent/InstructorContent';
@@ -14,7 +14,7 @@ const Instructors = () => {
         <InstructorContainer>
             {open ?
                 <SideNav open={open}>
-                    <i onClick={() => setOpen(!open)} class="fas fa-times"></i>
+                    <i onClick={() => setOpen(!open)} className="fas fa-times"></i>
                     <h3>
                         Instructors
                 </h3>
@@ -28,7 +28,7 @@ const Instructors = () => {
                     }
                 </SideNav>
                 :
-                <i onClick={() => setOpen(!open)} class="fas fa-bars"></i>
+                <i onClick={() => setOpen(!open)} className="fas fa-bars"></i>
             }
             <InstructorContent data={active} />
 

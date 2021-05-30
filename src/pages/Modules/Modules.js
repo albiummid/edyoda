@@ -12,13 +12,14 @@ const Modules = () => {
     return (
         <ModulesContainer>
             {open ? <SideNav open={open}>
-                <i onClick={() => setOpen(!open)} class="fas fa-times"></i>
+                <i onClick={() => setOpen(!open)} className="fas fa-times"></i>
                 <h3>
                     Modules
                 </h3>
                 {
-                    modulesData.map(data =>
+                    modulesData.map((data, index) =>
                         <SideNavItem
+                            key={index}
                             data={data}
                             active={active}
                             setActive={setActive}
@@ -28,7 +29,7 @@ const Modules = () => {
 
             </SideNav>
                 :
-                <i onClick={() => setOpen(!open)} class="fas fa-bars"></i>
+                <i onClick={() => setOpen(!open)} className="fas fa-bars"></i>
             }
             <Container>
                 <ContainerHeader>

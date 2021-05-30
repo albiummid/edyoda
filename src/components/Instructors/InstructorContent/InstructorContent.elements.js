@@ -8,11 +8,12 @@ flex-wrap: wrap;
 background-color: #F3F3F3;
 gap: 20px;
 .video{
-    width: 500px;
+    max-width: 300px;
 }
 .profile{
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     justify-content:space-between;
     gap: 50px;
     .social{

@@ -3,7 +3,6 @@ import { ActionBar, ModuleTop, ProgressContainer, TitleContainer, TopbarContaine
 import dropdown from '../../../images/dropdown-icon-white.svg'
 import { Line } from 'rc-progress';
 const Topbar = ({ open, setOpen }) => {
-    console.log(open);
     const percent = 33;
     const [program, setProgram] = useState('Web Development')
     const [click, setClick] = useState(false);
@@ -17,7 +16,7 @@ const Topbar = ({ open, setOpen }) => {
         <>
             <TopbarContainer>
                 <TitleContainer>
-                    <i onClick={() => setOpen(!open)} class="fas fa-bars"></i>
+                    <i onClick={() => setOpen(!open)} className="fas fa-bars"></i>
                     <div>
                         <p>{program}</p>
                         <img className={click ? 'open' : 'close'} onClick={() => setClick(!click)} src={dropdown} alt="" />

@@ -13,26 +13,29 @@ border-radius: 10px;
     div{
         display: flex;
         align-items: center;
-        justify-content: center;
         gap: 10px;
     }
 }
 
 .title_bar {
     display: flex;
+    justify-content:space-around;
     align-items: center;
     gap: 20px;
     padding: 10px;
-
 }
 .card_info{
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
+    display: flex;
+    justify-content: space-around;
     div{
         display: flex;
         flex-direction: column;
         justify-content: center;
+        gap: 0px;
         align-items: center;
+        h1{
+            margin: 0;
+        }
     }
 
 }
