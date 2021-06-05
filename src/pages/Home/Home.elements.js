@@ -118,11 +118,10 @@ padding: 10px 15px;
 width: 250px;
 margin: 30px auto;
 .bar_info{
+    font-family: 'Roboto';
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 50px;
 }
-
-
 `;
