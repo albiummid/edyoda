@@ -1,18 +1,18 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useParams } from 'react-router-dom';
 import { ItemContainer } from './BarItem.elements';
 
 const BarItem = ({ path, imageWhite, imageDark, title }) => {
     const currentPath = window.location.pathname;
+    useParams();
     return (
         <ItemContainer>
             <NavLink exact activeClassName='active-item'
-                to={'/' + path}
+                to={path}
             >
-
                 <img
                     src={
-                        currentPath === '/' + path ?
+                        currentPath === path ?
                             imageDark
                             :
                             imageWhite

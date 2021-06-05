@@ -8,23 +8,23 @@ import instructorsImgWhite from '../../../images/instructors-white.svg'
 import instructorsImgDark from '../../../images/instructors-dark.svg'
 import BarItem from './BarItem/BarItem';
 
-const Sidebar = ({ open }) => {
+const Sidebar = () => {
     return (
-        <SidebarContainer open={open}>
+        <SidebarContainer>
             <BarItem
-                path=''
+                path='/'
                 title='Home'
                 imageWhite={homeImgWhite}
                 imageDark={homeImgDark}
             />
             <BarItem
-                path='modules'
+                path='/modules'
                 title='Modules'
                 imageWhite={modulesImgWhite}
                 imageDark={modulesImgDark}
             />
             <BarItem
-                path='instructors'
+                path='/instructors'
                 title='Instructors'
                 imageWhite={instructorsImgWhite}
                 imageDark={instructorsImgDark}

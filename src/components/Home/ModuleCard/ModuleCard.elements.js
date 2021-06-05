@@ -1,11 +1,13 @@
 import styled from "styled-components";
 
 export const CardContainer = styled.div`
+font-family: "Raleway", sans-serif;
 box-shadow: 0px 10px 40px;
 padding: 10px 12px;
 width: 360px;
 border-radius: 10px;
 .module_info{
+    font-family: "Roboto", sans-serif;
    h2{
        letter-spacing: 2px;
        text-transform: uppercase;
@@ -34,6 +36,7 @@ border-radius: 10px;
         gap: 0px;
         align-items: center;
         h1{
+            font-family: "Roboto", sans-serif;
             margin: 0;
         }
     }

@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const Header = styled.div`
+font-family: "Raleway", sans-serif;
 display: flex;
 justify-content: center;
 gap: 20px;
@@ -58,6 +59,7 @@ height: 40px;
     gap: 20px;
 }
 .visual_bar{
+    font-family: "Roboto", sans-serif;
     display: flex;
     gap: 30px;
     padding: 10px;

@@ -2,12 +2,11 @@ import React, { useState } from 'react';
 import { ActionBar, ModuleTop, ProgressContainer, TitleContainer, TopbarContainer } from './Topbar.elements';
 import dropdown from '../../../images/dropdown-icon-white.svg'
 import { Line } from 'rc-progress';
-const Topbar = ({ open, setOpen }) => {
+const Topbar = () => {
     const percent = 33;
-    const [program, setProgram] = useState('Web Development')
+    const [program, setProgram] = useState('Web Development');
     const [click, setClick] = useState(false);
     const programPicker = (title) => {
-        setClick(false);
         setProgram(title);
     }
     const currentPath = window.location.pathname;
@@ -16,7 +15,6 @@ const Topbar = ({ open, setOpen }) => {
         <>
             <TopbarContainer>
                 <TitleContainer>
-                    <i onClick={() => setOpen(!open)} className="fas fa-bars"></i>
                     <div>
                         <p>{program}</p>
                         <img className={click ? 'open' : 'close'} onClick={() => setClick(!click)} src={dropdown} alt="" />
@@ -43,22 +41,21 @@ const Topbar = ({ open, setOpen }) => {
                 }
             </TopbarContainer>
             {
-                click &&
-                <ActionBar className={click ? "" : 'd-none'}>
+                <ActionBar onClick={() => setClick(!click)} click={click}>
                     <small>Select Program</small>
                     <div>
                         <p
-                            className={program === 'Web Development' && 'active-program'}
+                            className={program === 'Web Development' ? 'active-program' : ''}
                             onClick={() => programPicker('Web Development')}>
                             Web Development
                             </p>
 
-                        <p className={program === 'Graphics Design' && 'active-program'}
+                        <p className={program === 'Graphics Design' ? 'active-program' : ''}
                             onClick={() => programPicker('Graphics Design')}>
                             Graphics Design
                             </p>
                         <p
-                            className={program === 'Machine Learning' && 'active-program'}
+                            className={program === 'Machine Learning' ? 'active-program' : ''}
                             onClick={() => programPicker('Machine Learning')}>
                             Machine Learning
                              </p>

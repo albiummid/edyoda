@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const Nav = styled.div`
+font-family: "Raleway", sans-serif;
 display: flex;
 justify-content: space-between;
 align-items: center;

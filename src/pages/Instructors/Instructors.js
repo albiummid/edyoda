@@ -1,35 +1,19 @@
 import React, { useState } from 'react';
-import SideNavItem from '../../shared/SideNavItem/SideNavItem';
-import { SideNav } from '../Modules/Modules.elements';
 import { InstructorContainer } from './Instructors.elements';
 import instructors from '../../FakeData/InstructorsData'
 import InstructorContent from '../../components/Instructors/InstructorContent/InstructorContent';
+import SideNavBar from '../../shared/SideNavBar/SideNavBar';
 
 const Instructors = () => {
     const instructorsData = instructors;
-    const [open, setOpen] = useState(true);
     const [active, setActive] = useState(instructorsData?.[0]);
 
     return (
         <InstructorContainer>
-            {open ?
-                <SideNav open={open}>
-                    <i onClick={() => setOpen(!open)} className="fas fa-times"></i>
-                    <h3>
-                        Instructors
-                </h3>
-                    {
-                        instructorsData.map((data, index) =>
-                            <SideNavItem key={index} data={data}
-                                active={active}
-                                setActive={setActive}
-                            />
-                        )
-                    }
-                </SideNav>
-                :
-                <i onClick={() => setOpen(!open)} className="fas fa-bars"></i>
-            }
+            <SideNavBar
+                active={active}
+                setActive={setActive}
+            />
             <InstructorContent data={active} />
 
         </InstructorContainer>

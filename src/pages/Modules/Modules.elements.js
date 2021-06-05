@@ -8,8 +8,8 @@ display: flex;
 `;
 
 export const Container = styled.div`
+font-family: "Raleway", sans-serif;
 .modules_section{
-    margin: 50px 0;
     h1{
         margin: 20px 0;
     }
@@ -38,12 +38,26 @@ margin: 30px 50px;
     margin: 20px;
 }
 `;
+
+export const Summary = styled.div`
+ol>li{
+    margin-left:15px;
+}
+
+`;
+export const ContainerHeader = styled.div`
+font-family: 'Roboto';
+margin:0px;
+max-width: 300px;
+
+
+`;
 export const SideNav = styled.div`
+font-family: "Roboto", sans-serif;
 width: 250px;
 min-height: 100vh;
 background-color: #e0e6f2;
 padding: 30px 0px;
-display: ${props => (props.open ? "block" : "none")};
 transition: all 1s ease;
 i{
     float: right;
@@ -54,17 +68,4 @@ i{
 h3{
     padding:10px 20px;
 }
-`;
-
-export const ContainerHeader = styled.div`
-margin:0px;
-max-width: 300px;
-
-
-`;
-export const Summary = styled.div`
-ol>li{
-    margin-left:15px;
-}
-
 `;

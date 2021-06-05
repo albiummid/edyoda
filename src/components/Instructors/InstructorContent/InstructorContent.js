@@ -1,12 +1,11 @@
 import React from 'react';
-import { Container } from '../../../pages/Modules/Modules.elements';
 import videoImg from '../../../images/intro-video-placeholder.jpg'
-import { About, Header, SkillCard, Skills, Stats, TagLine, Title } from './InstructorContent.elements';
+import { About, Header, InstructorContainer, SkillCard, Skills, Stats, TagLine, Title } from './InstructorContent.elements';
 
 const InstructorContent = ({ data }) => {
     const { name, socialLink, icon, stats, skills, about, tagline } = data;
     return (
-        <Container>
+        <InstructorContainer>
             <Header>
                 <div className="profile">
                     <div className="social">
@@ -22,8 +21,6 @@ const InstructorContent = ({ data }) => {
                             <a href={socialLink.linkedIn} target='_blank' rel="noreferrer">
                                 <i className="fab fa-linkedin" ></i>
                             </a>
-
-
                         </div>
                     </div>
                     <h1>
@@ -61,8 +58,8 @@ const InstructorContent = ({ data }) => {
                 </Title>
                 <div className="skillContainer">
                     {
-                        skills?.map(data =>
-                            <SkillCard>
+                        skills?.map((data, index) =>
+                            <SkillCard key={index}>
                                 <img src={data.icon} alt="" />
                                 <p>{data.title}</p>
                             </SkillCard>
@@ -90,8 +87,7 @@ const InstructorContent = ({ data }) => {
                 </p>
 
             </About>
-
-        </Container>
+        </InstructorContainer>
     );
 };
 

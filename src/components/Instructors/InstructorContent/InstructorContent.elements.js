@@ -1,4 +1,12 @@
 import styled from "styled-components";
+export const InstructorContainer = styled.div`
+font-family: "Raleway", sans-serif;
+margin: 60px 80px;
+background-color:white;
+box-shadow: 0 10px 40px gray;
+border: 1px solid #CCEDFF;
+border-radius: 5px;
+`;
 
 export const Header = styled.div`
 display: flex;
@@ -7,8 +15,10 @@ justify-content: space-evenly;
 flex-wrap: wrap;
 background-color: #F3F3F3;
 gap: 20px;
+padding: 30px 50px;
+margin-top:100px;
 .video{
-    max-width: 300px;
+    max-width: 400px;
 }
 .profile{
     display: flex;
@@ -17,6 +27,9 @@ gap: 20px;
     justify-content:space-between;
     gap: 50px;
     .social{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
         img{
             width: 150px;
         }
@@ -24,11 +37,11 @@ gap: 20px;
         display: flex;
         align-items: center;
     justify-content: center;
-    gap: 10px;
+    gap: 20px;
        }
        a{
            text-decoration: none;
-           color: black;
+           color: gray;
            i{
                font-size: 25px;
            }
@@ -38,7 +51,8 @@ gap: 20px;
 `;
 
 export const Stats = styled.div`
-margin-top: 80px;
+font-family: 'Roboto', sans-serif ;
+margin: 30px 50px;
 
 div{
     display: flex;
@@ -53,7 +67,8 @@ div{
 `;
 
 export const Skills = styled.div`
-margin-top: 80px;
+padding: 30px 50px;
+
 .skillContainer{
     display: flex;
     gap: 50px;
@@ -61,6 +76,7 @@ margin-top: 80px;
 }
 `;
 export const SkillCard = styled.div`
+   font-family: 'Roboto', sans-serif ;
 display: flex;
 align-items: center;
 flex-direction: column;
@@ -73,12 +89,11 @@ img{
 }
 `;
 export const Title = styled.h3`
-margin-bottom:20px;
+padding-bottom: 10px;
 `;
 export const TagLine = styled.div`
-margin-top: 80px;
+padding: 30px 50px;
 `;
 export const About = styled.div`
-
-margin-top: 80px;
+padding: 30px 50px;
 `;
